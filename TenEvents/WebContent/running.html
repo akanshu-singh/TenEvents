@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Running Sum</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<label for="name"> Enter a number: </label>
+<input type="text" id="name" name="name" value="" ><br><br>
+<div id="hope">Sum of </div>
+<script>
+var input = document.getElementById("name");
+input.addEventListener("keyup", myFunction);
+var changeme = document.getElementById("hope");
+var sum=0;
+function myFunction(){
+		if (event.keyCode === 13) {
+        event.preventDefault();
+        changeme.innerHTML += "[";
+        for (var i=1;i<parseInt(input.value);i++){
+        	sum+=i;
+            changeme.innerHTML += i+",";
+	
+        }
+        changeme.innerHTML += "] = "+sum;
+        
+}}
+</script>
+</body>
+</html>

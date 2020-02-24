@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Stack</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+	<label for="name"> Push</label>
+	<input type="text" id="name" name="name" value="">
+	<button id="mbutton" type="button" onclick="move()">Pop</button>
+	<br>
+
+	<div id="hope"></div>
+
+	<script>
+		var input = document.getElementById("name");
+		var array = [];
+		input.addEventListener("keyup", myFunction);
+		var changeme = document.getElementById("hope");
+		var sum = 0;
+		function myFunction() {
+			if (event.keyCode === 13) {
+				array.push(input.value);
+				event.preventDefault();
+				display();
+
+			}
+		}
+		function move() {
+			array.pop();
+			display();
+		}
+		function display(){
+			changeme.innerHTML = "";
+			for (var i = 0; i < array.length; i++) {
+				changeme.innerHTML += "• " + array[i] + "<br>";
+				//changeme.innerHTML += "*" + input.value+"<br>";
+				input.value = "";
+			}
+		}
+	</script>
+</body>
+
+</html>

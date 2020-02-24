@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Over Out</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+	
+	<h1 onmouseenter="myFunctione()" onmouseleave="myFunctionl()"
+		style="height: 100px; width: 500px; background-color: pink; borderColor: red; size; text-align:center">
+		Hover Over Me</h1>
+	<br>
+	<h1 id="changeme" style="height: 100px; width: 500px; background-color: pink; border-color: red;text-align:center" vlaue=""></h1>
+	
+</body>
+<script>
+var enter=0;
+var exit=0;
+var change=document.getElementById("changeme");
+function myFunctione(){
+	enter++;
+	change.innerHTML = "Entered "+enter+" events";
+	
+}
+function myFunctionl(){
+	exit++;
+	change.innerHTML = "Exited "+exit+" events";
+
+}
+
+</script>
+</html>

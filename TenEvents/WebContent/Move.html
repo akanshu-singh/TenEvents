@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Move Text</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<input type="text" id="ltext" name="fname" value="">
+<button  id="mbutton" type="button" onclick="move()">>> Move left to right>> </button>
+<input type="text" id="rtext" name="fname" value="">
+<script>
+function move(){
+	var butt=document.getElementById("button");
+	var rtext=document.getElementById("rtext");
+	var ltext=document.getElementById("ltext");
+	rtext.value = ltext.value;
+	ltext.value="";
+	
+}
+</script>
+</body>
+</html>

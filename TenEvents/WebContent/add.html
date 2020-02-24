@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add to Array</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<label for="name"> Enter name here: </label>
+<input type="text" id="ntobea" name="ntobea" value="" ><br><br>
+<div id="hope">The Array of names: <br><br></div>
+</body>
+<script>
+var input = document.getElementById("ntobea");
+input.addEventListener("keyup", myFunction);
+var changeme = document.getElementById("hope");
+var i = 1;
+function myFunction(){
+		if (event.keyCode === 13) {
+        event.preventDefault();
+        var change = i+": "+input.value;
+        changeme.innerHTML += change+"<br>";
+		input.value = "";
+		i++;
+}}
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pixel Increase</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<button  id="mbutton" type="button" onclick="move()">>> Increment by 1 px>> </button><br>
+<div class="another" id="changeme">Increase my point size by 1px each click</div>  
+</body>
+<script>
+var txt;
+var style;
+var currentSize;
+
+function move() {
+	    txt = document.getElementById("changeme");
+	    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+	    currentSize = parseFloat(style);
+	    txt.style.fontSize = (currentSize + 1) + 'px';
+	}
+
+</script>
+</html>

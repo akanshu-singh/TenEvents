@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Rick Mercer -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hide / Show</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<button class="button2" id="hsButton" type="button" onclick="hideShow()" >hide</button>
+<div id="hideShow">
+<br /> TBA: This text will appear and disappear.
+</div>
+<script>
+function hideShow(){
+	var frame=document.getElementById("hideShow");
+	var butt = document.getElementById("hsButton");
+	if (butt.innerHTML == "hide"){ 
+	butt.innerHTML="show";
+	frame.innerHTML = '';}
+	if (butt.innerHTML == "show"){
+		butt.innerHTML="hide";
+		frame.innerHTML = 'TBA: This text will appear and disappear.';}
+		
+	
+}
+</script>
+</body>
+</html>

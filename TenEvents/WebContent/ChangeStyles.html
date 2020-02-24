@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Change 7 Style</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<div  onclick="change()"> Click this text</div>
+<div class="appear "id="appear"></div>
+</body>
+<script>
+function change(){
+	var app = document.getElementById("appear");
+	app.innerHTML = "Change inner HTML, font 24px, border 5px; width 300px; float right, padding 50 px, background? you guess"
+}
+</script>
+</html>

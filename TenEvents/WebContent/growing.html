@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Growing Image</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+	<p>Click the image to see it grow.</p>
+	<img id="changeme" src="bora-bora-french-polynesia-11.jpg" height="30"
+		width="30" alt="bora bora" onclick="myfunction()">
+</body>
+<script>
+	function myfunction() {
+		var change = document.getElementById("changeme");
+		change.height += 10;
+		change.width += 10;
+	}
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+<link href="styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+x <input id="one"></input> <br>
+y <input id="two"></input>  <br>
+<button id="button"> Show results </button> <br><br>
+<div id="message"></div>
+</body>
+<script>
+var x = document.getElementById("one");
+var y = document.getElementById("two");
+var divToChange = document.getElementById("message");
+var element = document.getElementById("button");
+element.addEventListener("click", function actionEvent () {
+	var Z = parseFloat(x.value)+parseFloat(y.value);
+	var message=x.value+" + "+y.value+" = "+Z+"<br>";
+	var Za = (parseFloat(x.value)*10-parseFloat(y.value)*10)/10;
+	message+=x.value+" - "+y.value+" = "+Za+"<br>";
+	var Zb = parseFloat(x.value)*parseFloat(y.value);
+	message+=x.value+" * "+y.value+" = "+Zb+"<br>";
+	var Zc = parseFloat(x.value)/parseFloat(y.value);
+	message+=x.value+" / "+y.value+" = "+Zc+"<br>";
+	var Zd = parseFloat(x.value)%parseFloat(y.value);
+	message+=x.value+" % "+y.value+" = "+Zd+"<br>";
+
+	divToChange.innerHTML = message;
+
+});
+</script>
+</html>
